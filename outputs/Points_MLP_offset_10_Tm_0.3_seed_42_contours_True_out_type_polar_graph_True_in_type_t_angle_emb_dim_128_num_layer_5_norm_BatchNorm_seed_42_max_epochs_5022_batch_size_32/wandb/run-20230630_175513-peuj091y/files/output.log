@@ -1,0 +1,71 @@
+Global seed set to 42
+GPU available: True (mps), used: False
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+/Users/kilianhaefeli/miniconda3/envs/pytorch_lightning_template/lib/python3.11/site-packages/lightning/pytorch/trainer/setup.py:201: UserWarning: MPS available but not used. Set `accelerator` and `devices` using `Trainer(accelerator='mps', devices=1)`.
+  rank_zero_warn(
+/Users/kilianhaefeli/miniconda3/envs/pytorch_lightning_template/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/checkpoint_connector.py:189: UserWarning: .fit(ckpt_path="last") is set, but there is no last checkpoint available. No checkpoint will be loaded.
+  rank_zero_warn(
+  | Name | Type | Params
+------------------------------
+0 | net  | MLP  | 66.4 K
+------------------------------
+66.4 K    Trainable params
+0         Non-trainable params
+66.4 K    Total params
+0.266     Total estimated model params size (MB)
+/Users/kilianhaefeli/miniconda3/envs/pytorch_lightning_template/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:432: PossibleUserWarning: The dataloader, val_dataloader, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 8 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+  rank_zero_warn(
+Traceback (most recent call last):
+  File "/Users/kilianhaefeli/pytorch_lightning_template/train_Points_MLP.py", line 22, in <module>
+    trainer.train()
+  File "/Users/kilianhaefeli/pytorch_lightning_template/project/train.py", line 143, in train
+    self.trainer.fit(self.model, self.train_loader, self.validation_loader, ckpt_path = "last")
+  File "/Users/kilianhaefeli/miniconda3/envs/pytorch_lightning_template/lib/python3.11/site-packages/lightning/pytorch/trainer/trainer.py", line 531, in fit
+    call._call_and_handle_interrupt(
+  File "/Users/kilianhaefeli/miniconda3/envs/pytorch_lightning_template/lib/python3.11/site-packages/lightning/pytorch/trainer/call.py", line 42, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kilianhaefeli/miniconda3/envs/pytorch_lightning_template/lib/python3.11/site-packages/lightning/pytorch/trainer/trainer.py", line 570, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/Users/kilianhaefeli/miniconda3/envs/pytorch_lightning_template/lib/python3.11/site-packages/lightning/pytorch/trainer/trainer.py", line 975, in _run
+    results = self._run_stage()
+              ^^^^^^^^^^^^^^^^^
+  File "/Users/kilianhaefeli/miniconda3/envs/pytorch_lightning_template/lib/python3.11/site-packages/lightning/pytorch/trainer/trainer.py", line 1016, in _run_stage
+    self._run_sanity_check()
+  File "/Users/kilianhaefeli/miniconda3/envs/pytorch_lightning_template/lib/python3.11/site-packages/lightning/pytorch/trainer/trainer.py", line 1045, in _run_sanity_check
+    val_loop.run()
+  File "/Users/kilianhaefeli/miniconda3/envs/pytorch_lightning_template/lib/python3.11/site-packages/lightning/pytorch/loops/utilities.py", line 177, in _decorator
+    return loop_run(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kilianhaefeli/miniconda3/envs/pytorch_lightning_template/lib/python3.11/site-packages/lightning/pytorch/loops/evaluation_loop.py", line 115, in run
+    self._evaluation_step(batch, batch_idx, dataloader_idx)
+  File "/Users/kilianhaefeli/miniconda3/envs/pytorch_lightning_template/lib/python3.11/site-packages/lightning/pytorch/loops/evaluation_loop.py", line 375, in _evaluation_step
+    output = call._call_strategy_hook(trainer, hook_name, *step_kwargs.values())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kilianhaefeli/miniconda3/envs/pytorch_lightning_template/lib/python3.11/site-packages/lightning/pytorch/trainer/call.py", line 287, in _call_strategy_hook
+    output = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/kilianhaefeli/miniconda3/envs/pytorch_lightning_template/lib/python3.11/site-packages/lightning/pytorch/strategies/strategy.py", line 379, in validation_step
+    return self.model.validation_step(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kilianhaefeli/pytorch_lightning_template/project/model/base.py", line 17, in validation_step
+    pred, loss = self.f_step(batch, batch_idx, train=False)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kilianhaefeli/pytorch_lightning_template/project/model/lightning.py", line 16, in f_step
+    loss = MSELoss(y, batch[1])
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kilianhaefeli/pytorch_lightning_template/project/metrics.py", line 7, in MSELoss
+    return nn.MSELoss(pred,output)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kilianhaefeli/miniconda3/envs/pytorch_lightning_template/lib/python3.11/site-packages/torch/nn/modules/loss.py", line 533, in __init__
+    super().__init__(size_average, reduce, reduction)
+  File "/Users/kilianhaefeli/miniconda3/envs/pytorch_lightning_template/lib/python3.11/site-packages/torch/nn/modules/loss.py", line 23, in __init__
+    self.reduction: str = _Reduction.legacy_get_string(size_average, reduce)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kilianhaefeli/miniconda3/envs/pytorch_lightning_template/lib/python3.11/site-packages/torch/nn/_reduction.py", line 35, in legacy_get_string
+    if size_average and reduce:
+RuntimeError: Boolean value of Tensor with more than one value is ambiguous
+Sanity Checking DataLoader 0:   0%|                                                                                                              | 0/2 [00:00<?, ?it/s]torch.float32
+torch.float32

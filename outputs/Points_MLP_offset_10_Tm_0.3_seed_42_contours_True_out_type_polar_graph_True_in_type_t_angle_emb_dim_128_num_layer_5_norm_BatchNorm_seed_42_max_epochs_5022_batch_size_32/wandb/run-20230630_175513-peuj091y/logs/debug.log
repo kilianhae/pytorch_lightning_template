@@ -1,0 +1,28 @@
+2023-06-30 17:55:13,895 INFO    MainThread:41736 [wandb_setup.py:_flush():76] Current SDK version is 0.15.4
+2023-06-30 17:55:13,896 INFO    MainThread:41736 [wandb_setup.py:_flush():76] Configure stats pid to 41736
+2023-06-30 17:55:13,896 INFO    MainThread:41736 [wandb_setup.py:_flush():76] Loading settings from /Users/kilianhaefeli/.config/wandb/settings
+2023-06-30 17:55:13,896 INFO    MainThread:41736 [wandb_setup.py:_flush():76] Loading settings from /Users/kilianhaefeli/pytorch_lightning_template/wandb/settings
+2023-06-30 17:55:13,896 INFO    MainThread:41736 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2023-06-30 17:55:13,896 INFO    MainThread:41736 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2023-06-30 17:55:13,896 INFO    MainThread:41736 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'train_Points_MLP.py', 'program': '/Users/kilianhaefeli/pytorch_lightning_template/train_Points_MLP.py'}
+2023-06-30 17:55:13,896 INFO    MainThread:41736 [wandb_init.py:_log_setup():507] Logging user logs to /Users/kilianhaefeli/pytorch_lightning_template/outputs/Points_MLP_offset_10_Tm_0.3_seed_42_contours_True_out_type_polar_graph_True_in_type_t_angle_emb_dim_128_num_layer_5_norm_BatchNorm_seed_42_max_epochs_5022_batch_size_32/wandb/run-20230630_175513-peuj091y/logs/debug.log
+2023-06-30 17:55:13,896 INFO    MainThread:41736 [wandb_init.py:_log_setup():508] Logging internal logs to /Users/kilianhaefeli/pytorch_lightning_template/outputs/Points_MLP_offset_10_Tm_0.3_seed_42_contours_True_out_type_polar_graph_True_in_type_t_angle_emb_dim_128_num_layer_5_norm_BatchNorm_seed_42_max_epochs_5022_batch_size_32/wandb/run-20230630_175513-peuj091y/logs/debug-internal.log
+2023-06-30 17:55:13,896 INFO    MainThread:41736 [wandb_init.py:init():547] calling init triggers
+2023-06-30 17:55:13,896 INFO    MainThread:41736 [wandb_init.py:init():554] wandb.init called with sweep_config: {}
+config: {'problem_type': 'Points', 'model_type': 'MLP', 'data_kwargs': {'features_num': 1}, 'dataset_kwargs': {'offset': 10, 'Tm': 0.3, 'seed': 42, 'contours': True, 'out_type': 'polar', 'graph': True, 'in_type': 't_angle'}, 'valid_kwargs': {'max_epochs': 5022, 'batch_size': 32}, 'model_kwargs': {'emb_dim': 128, 'num_layer': 5, 'norm': 'BatchNorm'}, 'training_kwargs': {'max_epochs': 5022, 'batch_size': 32}, 'lightning_kwargs': {}}
+2023-06-30 17:55:13,897 INFO    MainThread:41736 [wandb_init.py:init():596] starting backend
+2023-06-30 17:55:13,897 INFO    MainThread:41736 [wandb_init.py:init():600] setting up manager
+2023-06-30 17:55:13,901 INFO    MainThread:41736 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=spawn,fork,forkserver, using: spawn
+2023-06-30 17:55:13,904 INFO    MainThread:41736 [wandb_init.py:init():606] backend started and connected
+2023-06-30 17:55:13,907 INFO    MainThread:41736 [wandb_init.py:init():703] updated telemetry
+2023-06-30 17:55:13,908 INFO    MainThread:41736 [wandb_init.py:init():736] communicating run to backend with 60.0 second timeout
+2023-06-30 17:55:14,450 INFO    MainThread:41736 [wandb_init.py:init():779] run resumed
+2023-06-30 17:55:14,459 INFO    MainThread:41736 [wandb_run.py:_on_init():2176] communicating current version
+2023-06-30 17:55:14,550 INFO    MainThread:41736 [wandb_run.py:_on_init():2185] got version response 
+2023-06-30 17:55:14,550 INFO    MainThread:41736 [wandb_init.py:init():787] starting run threads in backend
+2023-06-30 17:55:14,583 INFO    MainThread:41736 [wandb_run.py:_console_start():2155] atexit reg
+2023-06-30 17:55:14,583 INFO    MainThread:41736 [wandb_run.py:_redirect():2010] redirect: 3
+2023-06-30 17:55:14,583 INFO    MainThread:41736 [wandb_run.py:_redirect():2075] Wrapping output streams.
+2023-06-30 17:55:14,583 INFO    MainThread:41736 [wandb_run.py:_redirect():2100] Redirects installed.
+2023-06-30 17:55:14,583 INFO    MainThread:41736 [wandb_init.py:init():828] run started, returning control to user process
+2023-06-30 17:55:20,425 WARNING MsgRouterThr:41736 [router.py:message_loop():77] message_loop has been closed

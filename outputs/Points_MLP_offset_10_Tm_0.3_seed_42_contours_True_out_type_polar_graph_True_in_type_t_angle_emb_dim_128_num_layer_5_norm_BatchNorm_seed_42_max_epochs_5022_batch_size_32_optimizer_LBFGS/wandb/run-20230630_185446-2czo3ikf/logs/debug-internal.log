@@ -1,0 +1,243 @@
+2023-06-30 18:54:46,673 INFO    StreamThr :47248 [internal.py:wandb_internal():86] W&B internal server running at pid: 47248, started at: 2023-06-30 18:54:46.673100
+2023-06-30 18:54:46,675 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: status
+2023-06-30 18:54:46,676 INFO    WriterThread:47248 [datastore.py:open_for_write():85] open: /Users/kilianhaefeli/pytorch_lightning_template/outputs/Points_MLP_offset_10_Tm_0.3_seed_42_contours_True_out_type_polar_graph_True_in_type_t_angle_emb_dim_128_num_layer_5_norm_BatchNorm_seed_42_max_epochs_5022_batch_size_32_optimizer_LBFGS/wandb/run-20230630_185446-2czo3ikf/run-2czo3ikf.wandb
+2023-06-30 18:54:46,676 DEBUG   SenderThread:47248 [sender.py:send():369] send: header
+2023-06-30 18:54:46,678 DEBUG   SenderThread:47248 [sender.py:send():369] send: run
+2023-06-30 18:54:46,680 INFO    SenderThread:47248 [sender.py:_maybe_setup_resume():737] checking resume status for None/sdsc-leap/2czo3ikf
+2023-06-30 18:54:46,886 INFO    SenderThread:47248 [sender.py:_maybe_setup_resume():809] configured resuming with: ResumeState(resumed=True,step=31,history=30,events=42,output=295,runtime=1296.912823,wandb_runtime=1290,summary={'_step': 30, 'val_MSELoss': 3.658160494524054e-05, 'train_MSELoss': 'NaN', 'train_epoch_MSELoss': 0.013791616074740888, 'trainer/global_step': 24, 'epoch': 0, '_runtime': 1275.0160071849823, '_timestamp': 1688143997.869645, 'val_L1Loss': 0.004381336271762848, 'train_epoch_L1Loss': 0.03153849020600319, 'val_epoch_MSELoss': 3.658160494524054e-05, '_wandb': {'runtime': 1290}, 'train_L1Loss': 'NaN', 'val_epoch_L1Loss': 0.004381336271762848},config={'_wandb': {'desc': None, 'value': {'t': {'1': [1, 55], '2': [1, 55], '3': [5, 13, 16, 23], '4': '3.11.3', '5': '0.15.4', '8': [4, 5]}, 'framework': 'torch', 'start_time': 1688143891.784097, 'cli_version': '0.15.4', 'is_jupyter_run': False, 'python_version': '3.11.3', 'is_kaggle_kernel': False}}, 'model_type': {'desc': None, 'value': 'MLP'}, 'data_kwargs': {'desc': None, 'value': {'features_num': 1}}, 'model_kwargs': {'desc': None, 'value': {'norm': 'BatchNorm', 'emb_dim': 128, 'num_layer': 5}}, 'problem_type': {'desc': None, 'value': 'Points'}, 'valid_kwargs': {'desc': None, 'value': {'batch_size': 32, 'max_epochs': 5022}}, 'dataset_kwargs': {'desc': None, 'value': {'Tm': 0.3, 'seed': 42, 'graph': True, 'offset': 10, 'in_type': 't_angle', 'contours': True, 'out_type': 'polar'}}, 'training_kwargs': {'desc': None, 'value': {'batch_size': 32, 'max_epochs': 5022}}, 'lightning_kwargs': {'desc': None, 'value': {'optimizer': 'LBFGS'}}})
+2023-06-30 18:54:47,222 INFO    SenderThread:47248 [dir_watcher.py:__init__():211] watching files in: /Users/kilianhaefeli/pytorch_lightning_template/outputs/Points_MLP_offset_10_Tm_0.3_seed_42_contours_True_out_type_polar_graph_True_in_type_t_angle_emb_dim_128_num_layer_5_norm_BatchNorm_seed_42_max_epochs_5022_batch_size_32_optimizer_LBFGS/wandb/run-20230630_185446-2czo3ikf/files
+2023-06-30 18:54:47,222 INFO    SenderThread:47248 [sender.py:_start_run_threads():1100] run started: 2czo3ikf with start time 1688142789.760382
+2023-06-30 18:54:47,222 DEBUG   SenderThread:47248 [sender.py:send_request():396] send_request: summary_record
+2023-06-30 18:54:47,223 INFO    SenderThread:47248 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-30 18:54:47,226 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: check_version
+2023-06-30 18:54:47,226 DEBUG   SenderThread:47248 [sender.py:send_request():396] send_request: check_version
+2023-06-30 18:54:47,321 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: run_start
+2023-06-30 18:54:47,327 DEBUG   HandlerThread:47248 [system_info.py:__init__():31] System info init
+2023-06-30 18:54:47,327 DEBUG   HandlerThread:47248 [system_info.py:__init__():46] System info init done
+2023-06-30 18:54:47,327 INFO    HandlerThread:47248 [system_monitor.py:start():181] Starting system monitor
+2023-06-30 18:54:47,327 INFO    SystemMonitor:47248 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-06-30 18:54:47,328 INFO    SystemMonitor:47248 [interfaces.py:start():190] Started cpu monitoring
+2023-06-30 18:54:47,328 INFO    SystemMonitor:47248 [interfaces.py:start():190] Started disk monitoring
+2023-06-30 18:54:47,330 INFO    SystemMonitor:47248 [interfaces.py:start():190] Started gpuapple monitoring
+2023-06-30 18:54:47,331 INFO    SystemMonitor:47248 [interfaces.py:start():190] Started memory monitoring
+2023-06-30 18:54:47,331 INFO    SystemMonitor:47248 [interfaces.py:start():190] Started network monitoring
+2023-06-30 18:54:47,337 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: stop_status
+2023-06-30 18:54:47,337 DEBUG   SenderThread:47248 [sender.py:send_request():396] send_request: stop_status
+2023-06-30 18:54:47,472 DEBUG   SenderThread:47248 [sender.py:send():369] send: telemetry
+2023-06-30 18:54:48,228 INFO    Thread-12 :47248 [dir_watcher.py:_on_file_created():272] file/dir created: /Users/kilianhaefeli/pytorch_lightning_template/outputs/Points_MLP_offset_10_Tm_0.3_seed_42_contours_True_out_type_polar_graph_True_in_type_t_angle_emb_dim_128_num_layer_5_norm_BatchNorm_seed_42_max_epochs_5022_batch_size_32_optimizer_LBFGS/wandb/run-20230630_185446-2czo3ikf/files/wandb-summary.json
+2023-06-30 18:54:48,228 INFO    Thread-12 :47248 [dir_watcher.py:_on_file_created():272] file/dir created: /Users/kilianhaefeli/pytorch_lightning_template/outputs/Points_MLP_offset_10_Tm_0.3_seed_42_contours_True_out_type_polar_graph_True_in_type_t_angle_emb_dim_128_num_layer_5_norm_BatchNorm_seed_42_max_epochs_5022_batch_size_32_optimizer_LBFGS/wandb/run-20230630_185446-2czo3ikf/files/output.log
+2023-06-30 18:54:50,237 INFO    Thread-12 :47248 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/kilianhaefeli/pytorch_lightning_template/outputs/Points_MLP_offset_10_Tm_0.3_seed_42_contours_True_out_type_polar_graph_True_in_type_t_angle_emb_dim_128_num_layer_5_norm_BatchNorm_seed_42_max_epochs_5022_batch_size_32_optimizer_LBFGS/wandb/run-20230630_185446-2czo3ikf/files/output.log
+2023-06-30 18:54:51,719 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: status_report
+2023-06-30 18:54:54,256 INFO    Thread-12 :47248 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/kilianhaefeli/pytorch_lightning_template/outputs/Points_MLP_offset_10_Tm_0.3_seed_42_contours_True_out_type_polar_graph_True_in_type_t_angle_emb_dim_128_num_layer_5_norm_BatchNorm_seed_42_max_epochs_5022_batch_size_32_optimizer_LBFGS/wandb/run-20230630_185446-2czo3ikf/files/output.log
+2023-06-30 18:54:56,764 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: status_report
+2023-06-30 18:55:01,785 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: status_report
+2023-06-30 18:55:02,341 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: stop_status
+2023-06-30 18:55:02,342 DEBUG   SenderThread:47248 [sender.py:send_request():396] send_request: stop_status
+2023-06-30 18:55:07,505 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: status_report
+2023-06-30 18:55:12,523 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: status_report
+2023-06-30 18:55:17,344 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: stop_status
+2023-06-30 18:55:17,345 DEBUG   SenderThread:47248 [sender.py:send_request():396] send_request: stop_status
+2023-06-30 18:55:18,513 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: status_report
+2023-06-30 18:55:19,354 INFO    Thread-12 :47248 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/kilianhaefeli/pytorch_lightning_template/outputs/Points_MLP_offset_10_Tm_0.3_seed_42_contours_True_out_type_polar_graph_True_in_type_t_angle_emb_dim_128_num_layer_5_norm_BatchNorm_seed_42_max_epochs_5022_batch_size_32_optimizer_LBFGS/wandb/run-20230630_185446-2czo3ikf/files/config.yaml
+2023-06-30 18:55:23,706 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: status_report
+2023-06-30 18:55:28,774 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: status_report
+2023-06-30 18:55:30,393 INFO    Thread-12 :47248 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/kilianhaefeli/pytorch_lightning_template/outputs/Points_MLP_offset_10_Tm_0.3_seed_42_contours_True_out_type_polar_graph_True_in_type_t_angle_emb_dim_128_num_layer_5_norm_BatchNorm_seed_42_max_epochs_5022_batch_size_32_optimizer_LBFGS/wandb/run-20230630_185446-2czo3ikf/files/output.log
+2023-06-30 18:55:32,344 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: stop_status
+2023-06-30 18:55:32,345 DEBUG   SenderThread:47248 [sender.py:send_request():396] send_request: stop_status
+2023-06-30 18:55:32,399 INFO    Thread-12 :47248 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/kilianhaefeli/pytorch_lightning_template/outputs/Points_MLP_offset_10_Tm_0.3_seed_42_contours_True_out_type_polar_graph_True_in_type_t_angle_emb_dim_128_num_layer_5_norm_BatchNorm_seed_42_max_epochs_5022_batch_size_32_optimizer_LBFGS/wandb/run-20230630_185446-2czo3ikf/files/output.log
+2023-06-30 18:55:34,511 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: status_report
+2023-06-30 18:55:38,423 INFO    Thread-12 :47248 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/kilianhaefeli/pytorch_lightning_template/outputs/Points_MLP_offset_10_Tm_0.3_seed_42_contours_True_out_type_polar_graph_True_in_type_t_angle_emb_dim_128_num_layer_5_norm_BatchNorm_seed_42_max_epochs_5022_batch_size_32_optimizer_LBFGS/wandb/run-20230630_185446-2czo3ikf/files/output.log
+2023-06-30 18:55:40,429 INFO    Thread-12 :47248 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/kilianhaefeli/pytorch_lightning_template/outputs/Points_MLP_offset_10_Tm_0.3_seed_42_contours_True_out_type_polar_graph_True_in_type_t_angle_emb_dim_128_num_layer_5_norm_BatchNorm_seed_42_max_epochs_5022_batch_size_32_optimizer_LBFGS/wandb/run-20230630_185446-2czo3ikf/files/output.log
+2023-06-30 18:55:40,494 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: status_report
+2023-06-30 18:55:44,446 INFO    Thread-12 :47248 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/kilianhaefeli/pytorch_lightning_template/outputs/Points_MLP_offset_10_Tm_0.3_seed_42_contours_True_out_type_polar_graph_True_in_type_t_angle_emb_dim_128_num_layer_5_norm_BatchNorm_seed_42_max_epochs_5022_batch_size_32_optimizer_LBFGS/wandb/run-20230630_185446-2czo3ikf/files/output.log
+2023-06-30 18:55:45,941 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: status_report
+2023-06-30 18:55:47,332 DEBUG   SystemMonitor:47248 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2023-06-30 18:55:47,333 DEBUG   SenderThread:47248 [sender.py:send():369] send: telemetry
+2023-06-30 18:55:47,333 DEBUG   SenderThread:47248 [sender.py:send():369] send: stats
+2023-06-30 18:55:47,348 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: stop_status
+2023-06-30 18:55:47,349 DEBUG   SenderThread:47248 [sender.py:send_request():396] send_request: stop_status
+2023-06-30 18:55:48,466 INFO    Thread-12 :47248 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/kilianhaefeli/pytorch_lightning_template/outputs/Points_MLP_offset_10_Tm_0.3_seed_42_contours_True_out_type_polar_graph_True_in_type_t_angle_emb_dim_128_num_layer_5_norm_BatchNorm_seed_42_max_epochs_5022_batch_size_32_optimizer_LBFGS/wandb/run-20230630_185446-2czo3ikf/files/output.log
+2023-06-30 18:55:50,472 INFO    Thread-12 :47248 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/kilianhaefeli/pytorch_lightning_template/outputs/Points_MLP_offset_10_Tm_0.3_seed_42_contours_True_out_type_polar_graph_True_in_type_t_angle_emb_dim_128_num_layer_5_norm_BatchNorm_seed_42_max_epochs_5022_batch_size_32_optimizer_LBFGS/wandb/run-20230630_185446-2czo3ikf/files/output.log
+2023-06-30 18:55:51,643 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: status_report
+2023-06-30 18:55:52,482 INFO    Thread-12 :47248 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/kilianhaefeli/pytorch_lightning_template/outputs/Points_MLP_offset_10_Tm_0.3_seed_42_contours_True_out_type_polar_graph_True_in_type_t_angle_emb_dim_128_num_layer_5_norm_BatchNorm_seed_42_max_epochs_5022_batch_size_32_optimizer_LBFGS/wandb/run-20230630_185446-2czo3ikf/files/config.yaml
+2023-06-30 18:55:54,492 INFO    Thread-12 :47248 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/kilianhaefeli/pytorch_lightning_template/outputs/Points_MLP_offset_10_Tm_0.3_seed_42_contours_True_out_type_polar_graph_True_in_type_t_angle_emb_dim_128_num_layer_5_norm_BatchNorm_seed_42_max_epochs_5022_batch_size_32_optimizer_LBFGS/wandb/run-20230630_185446-2czo3ikf/files/output.log
+2023-06-30 18:55:57,714 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: status_report
+2023-06-30 18:55:58,513 INFO    Thread-12 :47248 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/kilianhaefeli/pytorch_lightning_template/outputs/Points_MLP_offset_10_Tm_0.3_seed_42_contours_True_out_type_polar_graph_True_in_type_t_angle_emb_dim_128_num_layer_5_norm_BatchNorm_seed_42_max_epochs_5022_batch_size_32_optimizer_LBFGS/wandb/run-20230630_185446-2czo3ikf/files/output.log
+2023-06-30 18:56:02,353 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: stop_status
+2023-06-30 18:56:02,355 DEBUG   SenderThread:47248 [sender.py:send_request():396] send_request: stop_status
+2023-06-30 18:56:02,527 INFO    Thread-12 :47248 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/kilianhaefeli/pytorch_lightning_template/outputs/Points_MLP_offset_10_Tm_0.3_seed_42_contours_True_out_type_polar_graph_True_in_type_t_angle_emb_dim_128_num_layer_5_norm_BatchNorm_seed_42_max_epochs_5022_batch_size_32_optimizer_LBFGS/wandb/run-20230630_185446-2czo3ikf/files/output.log
+2023-06-30 18:56:03,502 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: status_report
+2023-06-30 18:56:04,535 INFO    Thread-12 :47248 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/kilianhaefeli/pytorch_lightning_template/outputs/Points_MLP_offset_10_Tm_0.3_seed_42_contours_True_out_type_polar_graph_True_in_type_t_angle_emb_dim_128_num_layer_5_norm_BatchNorm_seed_42_max_epochs_5022_batch_size_32_optimizer_LBFGS/wandb/run-20230630_185446-2czo3ikf/files/output.log
+2023-06-30 18:56:08,555 INFO    Thread-12 :47248 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/kilianhaefeli/pytorch_lightning_template/outputs/Points_MLP_offset_10_Tm_0.3_seed_42_contours_True_out_type_polar_graph_True_in_type_t_angle_emb_dim_128_num_layer_5_norm_BatchNorm_seed_42_max_epochs_5022_batch_size_32_optimizer_LBFGS/wandb/run-20230630_185446-2czo3ikf/files/output.log
+2023-06-30 18:56:09,210 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: status_report
+2023-06-30 18:56:12,573 INFO    Thread-12 :47248 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/kilianhaefeli/pytorch_lightning_template/outputs/Points_MLP_offset_10_Tm_0.3_seed_42_contours_True_out_type_polar_graph_True_in_type_t_angle_emb_dim_128_num_layer_5_norm_BatchNorm_seed_42_max_epochs_5022_batch_size_32_optimizer_LBFGS/wandb/run-20230630_185446-2czo3ikf/files/output.log
+2023-06-30 18:56:14,976 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: status_report
+2023-06-30 18:56:16,586 INFO    Thread-12 :47248 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/kilianhaefeli/pytorch_lightning_template/outputs/Points_MLP_offset_10_Tm_0.3_seed_42_contours_True_out_type_polar_graph_True_in_type_t_angle_emb_dim_128_num_layer_5_norm_BatchNorm_seed_42_max_epochs_5022_batch_size_32_optimizer_LBFGS/wandb/run-20230630_185446-2czo3ikf/files/output.log
+2023-06-30 18:56:17,338 DEBUG   SenderThread:47248 [sender.py:send():369] send: stats
+2023-06-30 18:56:17,359 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: stop_status
+2023-06-30 18:56:17,359 DEBUG   SenderThread:47248 [sender.py:send_request():396] send_request: stop_status
+2023-06-30 18:56:18,594 INFO    Thread-12 :47248 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/kilianhaefeli/pytorch_lightning_template/outputs/Points_MLP_offset_10_Tm_0.3_seed_42_contours_True_out_type_polar_graph_True_in_type_t_angle_emb_dim_128_num_layer_5_norm_BatchNorm_seed_42_max_epochs_5022_batch_size_32_optimizer_LBFGS/wandb/run-20230630_185446-2czo3ikf/files/output.log
+2023-06-30 18:56:20,524 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: status_report
+2023-06-30 18:56:22,609 INFO    Thread-12 :47248 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/kilianhaefeli/pytorch_lightning_template/outputs/Points_MLP_offset_10_Tm_0.3_seed_42_contours_True_out_type_polar_graph_True_in_type_t_angle_emb_dim_128_num_layer_5_norm_BatchNorm_seed_42_max_epochs_5022_batch_size_32_optimizer_LBFGS/wandb/run-20230630_185446-2czo3ikf/files/output.log
+2023-06-30 18:56:26,159 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: status_report
+2023-06-30 18:56:26,626 INFO    Thread-12 :47248 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/kilianhaefeli/pytorch_lightning_template/outputs/Points_MLP_offset_10_Tm_0.3_seed_42_contours_True_out_type_polar_graph_True_in_type_t_angle_emb_dim_128_num_layer_5_norm_BatchNorm_seed_42_max_epochs_5022_batch_size_32_optimizer_LBFGS/wandb/run-20230630_185446-2czo3ikf/files/output.log
+2023-06-30 18:56:28,635 INFO    Thread-12 :47248 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/kilianhaefeli/pytorch_lightning_template/outputs/Points_MLP_offset_10_Tm_0.3_seed_42_contours_True_out_type_polar_graph_True_in_type_t_angle_emb_dim_128_num_layer_5_norm_BatchNorm_seed_42_max_epochs_5022_batch_size_32_optimizer_LBFGS/wandb/run-20230630_185446-2czo3ikf/files/output.log
+2023-06-30 18:56:31,297 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: status_report
+2023-06-30 18:56:32,362 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: stop_status
+2023-06-30 18:56:32,362 DEBUG   SenderThread:47248 [sender.py:send_request():396] send_request: stop_status
+2023-06-30 18:56:32,654 INFO    Thread-12 :47248 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/kilianhaefeli/pytorch_lightning_template/outputs/Points_MLP_offset_10_Tm_0.3_seed_42_contours_True_out_type_polar_graph_True_in_type_t_angle_emb_dim_128_num_layer_5_norm_BatchNorm_seed_42_max_epochs_5022_batch_size_32_optimizer_LBFGS/wandb/run-20230630_185446-2czo3ikf/files/output.log
+2023-06-30 18:56:36,669 INFO    Thread-12 :47248 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/kilianhaefeli/pytorch_lightning_template/outputs/Points_MLP_offset_10_Tm_0.3_seed_42_contours_True_out_type_polar_graph_True_in_type_t_angle_emb_dim_128_num_layer_5_norm_BatchNorm_seed_42_max_epochs_5022_batch_size_32_optimizer_LBFGS/wandb/run-20230630_185446-2czo3ikf/files/output.log
+2023-06-30 18:56:37,020 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: status_report
+2023-06-30 18:56:40,682 INFO    Thread-12 :47248 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/kilianhaefeli/pytorch_lightning_template/outputs/Points_MLP_offset_10_Tm_0.3_seed_42_contours_True_out_type_polar_graph_True_in_type_t_angle_emb_dim_128_num_layer_5_norm_BatchNorm_seed_42_max_epochs_5022_batch_size_32_optimizer_LBFGS/wandb/run-20230630_185446-2czo3ikf/files/output.log
+2023-06-30 18:56:42,205 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: status_report
+2023-06-30 18:56:44,698 INFO    Thread-12 :47248 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/kilianhaefeli/pytorch_lightning_template/outputs/Points_MLP_offset_10_Tm_0.3_seed_42_contours_True_out_type_polar_graph_True_in_type_t_angle_emb_dim_128_num_layer_5_norm_BatchNorm_seed_42_max_epochs_5022_batch_size_32_optimizer_LBFGS/wandb/run-20230630_185446-2czo3ikf/files/output.log
+2023-06-30 18:56:47,341 DEBUG   SenderThread:47248 [sender.py:send():369] send: stats
+2023-06-30 18:56:47,342 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: status_report
+2023-06-30 18:56:47,365 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: stop_status
+2023-06-30 18:56:47,365 DEBUG   SenderThread:47248 [sender.py:send_request():396] send_request: stop_status
+2023-06-30 18:56:48,716 INFO    Thread-12 :47248 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/kilianhaefeli/pytorch_lightning_template/outputs/Points_MLP_offset_10_Tm_0.3_seed_42_contours_True_out_type_polar_graph_True_in_type_t_angle_emb_dim_128_num_layer_5_norm_BatchNorm_seed_42_max_epochs_5022_batch_size_32_optimizer_LBFGS/wandb/run-20230630_185446-2czo3ikf/files/output.log
+2023-06-30 18:56:50,728 INFO    Thread-12 :47248 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/kilianhaefeli/pytorch_lightning_template/outputs/Points_MLP_offset_10_Tm_0.3_seed_42_contours_True_out_type_polar_graph_True_in_type_t_angle_emb_dim_128_num_layer_5_norm_BatchNorm_seed_42_max_epochs_5022_batch_size_32_optimizer_LBFGS/wandb/run-20230630_185446-2czo3ikf/files/output.log
+2023-06-30 18:56:52,408 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: status_report
+2023-06-30 18:56:52,736 INFO    Thread-12 :47248 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/kilianhaefeli/pytorch_lightning_template/outputs/Points_MLP_offset_10_Tm_0.3_seed_42_contours_True_out_type_polar_graph_True_in_type_t_angle_emb_dim_128_num_layer_5_norm_BatchNorm_seed_42_max_epochs_5022_batch_size_32_optimizer_LBFGS/wandb/run-20230630_185446-2czo3ikf/files/output.log
+2023-06-30 18:56:57,427 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: status_report
+2023-06-30 18:57:02,371 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: stop_status
+2023-06-30 18:57:02,372 DEBUG   SenderThread:47248 [sender.py:send_request():396] send_request: stop_status
+2023-06-30 18:57:02,525 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: status_report
+2023-06-30 18:57:07,533 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: status_report
+2023-06-30 18:57:12,554 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: status_report
+2023-06-30 18:57:17,349 DEBUG   SenderThread:47248 [sender.py:send():369] send: stats
+2023-06-30 18:57:17,375 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: stop_status
+2023-06-30 18:57:17,376 DEBUG   SenderThread:47248 [sender.py:send_request():396] send_request: stop_status
+2023-06-30 18:57:18,512 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: status_report
+2023-06-30 18:57:23,529 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: status_report
+2023-06-30 18:57:28,556 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: status_report
+2023-06-30 18:57:30,571 DEBUG   SenderThread:47248 [sender.py:send():369] send: exit
+2023-06-30 18:57:30,571 INFO    SenderThread:47248 [sender.py:send_exit():574] handling exit code: 1
+2023-06-30 18:57:30,572 INFO    SenderThread:47248 [sender.py:send_exit():576] handling runtime: 1453
+2023-06-30 18:57:30,572 INFO    SenderThread:47248 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-30 18:57:30,573 INFO    SenderThread:47248 [sender.py:send_exit():582] send defer
+2023-06-30 18:57:30,573 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: defer
+2023-06-30 18:57:30,573 INFO    HandlerThread:47248 [handler.py:handle_request_defer():170] handle defer: 0
+2023-06-30 18:57:30,573 DEBUG   SenderThread:47248 [sender.py:send_request():396] send_request: defer
+2023-06-30 18:57:30,573 INFO    SenderThread:47248 [sender.py:send_request_defer():598] handle sender defer: 0
+2023-06-30 18:57:30,573 INFO    SenderThread:47248 [sender.py:transition_state():602] send defer: 1
+2023-06-30 18:57:30,573 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: defer
+2023-06-30 18:57:30,574 INFO    HandlerThread:47248 [handler.py:handle_request_defer():170] handle defer: 1
+2023-06-30 18:57:30,574 DEBUG   SenderThread:47248 [sender.py:send_request():396] send_request: defer
+2023-06-30 18:57:30,574 INFO    SenderThread:47248 [sender.py:send_request_defer():598] handle sender defer: 1
+2023-06-30 18:57:30,574 INFO    SenderThread:47248 [sender.py:transition_state():602] send defer: 2
+2023-06-30 18:57:30,574 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: defer
+2023-06-30 18:57:30,574 INFO    HandlerThread:47248 [handler.py:handle_request_defer():170] handle defer: 2
+2023-06-30 18:57:30,574 INFO    HandlerThread:47248 [system_monitor.py:finish():190] Stopping system monitor
+2023-06-30 18:57:30,574 DEBUG   SystemMonitor:47248 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2023-06-30 18:57:30,574 DEBUG   SystemMonitor:47248 [system_monitor.py:_start():170] Publishing last batch of metrics
+2023-06-30 18:57:30,574 INFO    HandlerThread:47248 [interfaces.py:finish():202] Joined cpu monitor
+2023-06-30 18:57:30,575 INFO    HandlerThread:47248 [interfaces.py:finish():202] Joined disk monitor
+2023-06-30 18:57:30,575 INFO    HandlerThread:47248 [interfaces.py:finish():202] Joined gpuapple monitor
+2023-06-30 18:57:30,575 INFO    HandlerThread:47248 [interfaces.py:finish():202] Joined memory monitor
+2023-06-30 18:57:30,575 INFO    HandlerThread:47248 [interfaces.py:finish():202] Joined network monitor
+2023-06-30 18:57:30,575 DEBUG   SenderThread:47248 [sender.py:send_request():396] send_request: defer
+2023-06-30 18:57:30,575 INFO    SenderThread:47248 [sender.py:send_request_defer():598] handle sender defer: 2
+2023-06-30 18:57:30,575 INFO    SenderThread:47248 [sender.py:transition_state():602] send defer: 3
+2023-06-30 18:57:30,575 DEBUG   SenderThread:47248 [sender.py:send():369] send: stats
+2023-06-30 18:57:30,575 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: defer
+2023-06-30 18:57:30,576 INFO    HandlerThread:47248 [handler.py:handle_request_defer():170] handle defer: 3
+2023-06-30 18:57:30,576 DEBUG   SenderThread:47248 [sender.py:send_request():396] send_request: defer
+2023-06-30 18:57:30,576 INFO    SenderThread:47248 [sender.py:send_request_defer():598] handle sender defer: 3
+2023-06-30 18:57:30,576 INFO    SenderThread:47248 [sender.py:transition_state():602] send defer: 4
+2023-06-30 18:57:30,576 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: defer
+2023-06-30 18:57:30,576 INFO    HandlerThread:47248 [handler.py:handle_request_defer():170] handle defer: 4
+2023-06-30 18:57:30,576 DEBUG   SenderThread:47248 [sender.py:send_request():396] send_request: defer
+2023-06-30 18:57:30,576 INFO    SenderThread:47248 [sender.py:send_request_defer():598] handle sender defer: 4
+2023-06-30 18:57:30,576 INFO    SenderThread:47248 [sender.py:transition_state():602] send defer: 5
+2023-06-30 18:57:30,576 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: defer
+2023-06-30 18:57:30,576 INFO    HandlerThread:47248 [handler.py:handle_request_defer():170] handle defer: 5
+2023-06-30 18:57:30,577 DEBUG   SenderThread:47248 [sender.py:send():369] send: summary
+2023-06-30 18:57:30,577 INFO    SenderThread:47248 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-30 18:57:30,577 DEBUG   SenderThread:47248 [sender.py:send_request():396] send_request: defer
+2023-06-30 18:57:30,577 INFO    SenderThread:47248 [sender.py:send_request_defer():598] handle sender defer: 5
+2023-06-30 18:57:30,577 INFO    SenderThread:47248 [sender.py:transition_state():602] send defer: 6
+2023-06-30 18:57:30,577 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: defer
+2023-06-30 18:57:30,578 INFO    HandlerThread:47248 [handler.py:handle_request_defer():170] handle defer: 6
+2023-06-30 18:57:30,578 DEBUG   SenderThread:47248 [sender.py:send_request():396] send_request: defer
+2023-06-30 18:57:30,578 INFO    SenderThread:47248 [sender.py:send_request_defer():598] handle sender defer: 6
+2023-06-30 18:57:30,578 INFO    SenderThread:47248 [sender.py:transition_state():602] send defer: 7
+2023-06-30 18:57:30,578 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: status_report
+2023-06-30 18:57:30,578 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: defer
+2023-06-30 18:57:30,578 INFO    HandlerThread:47248 [handler.py:handle_request_defer():170] handle defer: 7
+2023-06-30 18:57:30,578 DEBUG   SenderThread:47248 [sender.py:send_request():396] send_request: defer
+2023-06-30 18:57:30,578 INFO    SenderThread:47248 [sender.py:send_request_defer():598] handle sender defer: 7
+2023-06-30 18:57:30,872 INFO    Thread-12 :47248 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/kilianhaefeli/pytorch_lightning_template/outputs/Points_MLP_offset_10_Tm_0.3_seed_42_contours_True_out_type_polar_graph_True_in_type_t_angle_emb_dim_128_num_layer_5_norm_BatchNorm_seed_42_max_epochs_5022_batch_size_32_optimizer_LBFGS/wandb/run-20230630_185446-2czo3ikf/files/wandb-summary.json
+2023-06-30 18:57:31,576 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: poll_exit
+2023-06-30 18:57:31,874 INFO    Thread-12 :47248 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/kilianhaefeli/pytorch_lightning_template/outputs/Points_MLP_offset_10_Tm_0.3_seed_42_contours_True_out_type_polar_graph_True_in_type_t_angle_emb_dim_128_num_layer_5_norm_BatchNorm_seed_42_max_epochs_5022_batch_size_32_optimizer_LBFGS/wandb/run-20230630_185446-2czo3ikf/files/output.log
+2023-06-30 18:57:32,082 INFO    SenderThread:47248 [sender.py:transition_state():602] send defer: 8
+2023-06-30 18:57:32,083 DEBUG   SenderThread:47248 [sender.py:send_request():396] send_request: poll_exit
+2023-06-30 18:57:32,083 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: defer
+2023-06-30 18:57:32,084 INFO    HandlerThread:47248 [handler.py:handle_request_defer():170] handle defer: 8
+2023-06-30 18:57:32,084 DEBUG   SenderThread:47248 [sender.py:send_request():396] send_request: defer
+2023-06-30 18:57:32,084 INFO    SenderThread:47248 [sender.py:send_request_defer():598] handle sender defer: 8
+2023-06-30 18:57:32,084 INFO    SenderThread:47248 [job_builder.py:build():232] Attempting to build job artifact
+2023-06-30 18:57:32,084 INFO    SenderThread:47248 [sender.py:transition_state():602] send defer: 9
+2023-06-30 18:57:32,085 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: defer
+2023-06-30 18:57:32,085 INFO    HandlerThread:47248 [handler.py:handle_request_defer():170] handle defer: 9
+2023-06-30 18:57:32,085 DEBUG   SenderThread:47248 [sender.py:send_request():396] send_request: defer
+2023-06-30 18:57:32,085 INFO    SenderThread:47248 [sender.py:send_request_defer():598] handle sender defer: 9
+2023-06-30 18:57:32,085 INFO    SenderThread:47248 [dir_watcher.py:finish():359] shutting down directory watcher
+2023-06-30 18:57:32,577 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: poll_exit
+2023-06-30 18:57:32,877 INFO    Thread-12 :47248 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/kilianhaefeli/pytorch_lightning_template/outputs/Points_MLP_offset_10_Tm_0.3_seed_42_contours_True_out_type_polar_graph_True_in_type_t_angle_emb_dim_128_num_layer_5_norm_BatchNorm_seed_42_max_epochs_5022_batch_size_32_optimizer_LBFGS/wandb/run-20230630_185446-2czo3ikf/files/output.log
+2023-06-30 18:57:32,878 INFO    SenderThread:47248 [dir_watcher.py:finish():389] scan: /Users/kilianhaefeli/pytorch_lightning_template/outputs/Points_MLP_offset_10_Tm_0.3_seed_42_contours_True_out_type_polar_graph_True_in_type_t_angle_emb_dim_128_num_layer_5_norm_BatchNorm_seed_42_max_epochs_5022_batch_size_32_optimizer_LBFGS/wandb/run-20230630_185446-2czo3ikf/files
+2023-06-30 18:57:32,879 INFO    SenderThread:47248 [dir_watcher.py:finish():403] scan save: /Users/kilianhaefeli/pytorch_lightning_template/outputs/Points_MLP_offset_10_Tm_0.3_seed_42_contours_True_out_type_polar_graph_True_in_type_t_angle_emb_dim_128_num_layer_5_norm_BatchNorm_seed_42_max_epochs_5022_batch_size_32_optimizer_LBFGS/wandb/run-20230630_185446-2czo3ikf/files/output.log output.log
+2023-06-30 18:57:32,880 INFO    SenderThread:47248 [dir_watcher.py:finish():403] scan save: /Users/kilianhaefeli/pytorch_lightning_template/outputs/Points_MLP_offset_10_Tm_0.3_seed_42_contours_True_out_type_polar_graph_True_in_type_t_angle_emb_dim_128_num_layer_5_norm_BatchNorm_seed_42_max_epochs_5022_batch_size_32_optimizer_LBFGS/wandb/run-20230630_185446-2czo3ikf/files/config.yaml config.yaml
+2023-06-30 18:57:32,880 INFO    SenderThread:47248 [dir_watcher.py:finish():403] scan save: /Users/kilianhaefeli/pytorch_lightning_template/outputs/Points_MLP_offset_10_Tm_0.3_seed_42_contours_True_out_type_polar_graph_True_in_type_t_angle_emb_dim_128_num_layer_5_norm_BatchNorm_seed_42_max_epochs_5022_batch_size_32_optimizer_LBFGS/wandb/run-20230630_185446-2czo3ikf/files/wandb-summary.json wandb-summary.json
+2023-06-30 18:57:32,880 INFO    SenderThread:47248 [sender.py:transition_state():602] send defer: 10
+2023-06-30 18:57:32,881 DEBUG   SenderThread:47248 [sender.py:send_request():396] send_request: poll_exit
+2023-06-30 18:57:32,882 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: defer
+2023-06-30 18:57:32,882 INFO    HandlerThread:47248 [handler.py:handle_request_defer():170] handle defer: 10
+2023-06-30 18:57:32,882 DEBUG   SenderThread:47248 [sender.py:send_request():396] send_request: defer
+2023-06-30 18:57:32,882 INFO    SenderThread:47248 [sender.py:send_request_defer():598] handle sender defer: 10
+2023-06-30 18:57:32,882 INFO    SenderThread:47248 [file_pusher.py:finish():159] shutting down file pusher
+2023-06-30 18:57:33,509 INFO    wandb-upload_1:47248 [upload_job.py:push():133] Uploaded file /Users/kilianhaefeli/pytorch_lightning_template/outputs/Points_MLP_offset_10_Tm_0.3_seed_42_contours_True_out_type_polar_graph_True_in_type_t_angle_emb_dim_128_num_layer_5_norm_BatchNorm_seed_42_max_epochs_5022_batch_size_32_optimizer_LBFGS/wandb/run-20230630_185446-2czo3ikf/files/config.yaml
+2023-06-30 18:57:33,511 INFO    wandb-upload_2:47248 [upload_job.py:push():133] Uploaded file /Users/kilianhaefeli/pytorch_lightning_template/outputs/Points_MLP_offset_10_Tm_0.3_seed_42_contours_True_out_type_polar_graph_True_in_type_t_angle_emb_dim_128_num_layer_5_norm_BatchNorm_seed_42_max_epochs_5022_batch_size_32_optimizer_LBFGS/wandb/run-20230630_185446-2czo3ikf/files/wandb-summary.json
+2023-06-30 18:57:33,512 INFO    wandb-upload_0:47248 [upload_job.py:push():133] Uploaded file /Users/kilianhaefeli/pytorch_lightning_template/outputs/Points_MLP_offset_10_Tm_0.3_seed_42_contours_True_out_type_polar_graph_True_in_type_t_angle_emb_dim_128_num_layer_5_norm_BatchNorm_seed_42_max_epochs_5022_batch_size_32_optimizer_LBFGS/wandb/run-20230630_185446-2czo3ikf/files/output.log
+2023-06-30 18:57:33,583 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: poll_exit
+2023-06-30 18:57:33,584 DEBUG   SenderThread:47248 [sender.py:send_request():396] send_request: poll_exit
+2023-06-30 18:57:33,713 INFO    Thread-11 (_thread_body):47248 [sender.py:transition_state():602] send defer: 11
+2023-06-30 18:57:33,714 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: defer
+2023-06-30 18:57:33,714 INFO    HandlerThread:47248 [handler.py:handle_request_defer():170] handle defer: 11
+2023-06-30 18:57:33,715 DEBUG   SenderThread:47248 [sender.py:send_request():396] send_request: defer
+2023-06-30 18:57:33,715 INFO    SenderThread:47248 [sender.py:send_request_defer():598] handle sender defer: 11
+2023-06-30 18:57:33,715 INFO    SenderThread:47248 [file_pusher.py:join():164] waiting for file pusher
+2023-06-30 18:57:33,715 INFO    SenderThread:47248 [sender.py:transition_state():602] send defer: 12
+2023-06-30 18:57:33,716 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: defer
+2023-06-30 18:57:33,716 INFO    HandlerThread:47248 [handler.py:handle_request_defer():170] handle defer: 12
+2023-06-30 18:57:33,716 DEBUG   SenderThread:47248 [sender.py:send_request():396] send_request: defer
+2023-06-30 18:57:33,716 INFO    SenderThread:47248 [sender.py:send_request_defer():598] handle sender defer: 12
+2023-06-30 18:57:34,429 INFO    SenderThread:47248 [sender.py:transition_state():602] send defer: 13
+2023-06-30 18:57:34,430 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: defer
+2023-06-30 18:57:34,430 INFO    HandlerThread:47248 [handler.py:handle_request_defer():170] handle defer: 13
+2023-06-30 18:57:34,431 DEBUG   SenderThread:47248 [sender.py:send_request():396] send_request: defer
+2023-06-30 18:57:34,431 INFO    SenderThread:47248 [sender.py:send_request_defer():598] handle sender defer: 13
+2023-06-30 18:57:34,431 INFO    SenderThread:47248 [sender.py:transition_state():602] send defer: 14
+2023-06-30 18:57:34,431 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: defer
+2023-06-30 18:57:34,432 INFO    HandlerThread:47248 [handler.py:handle_request_defer():170] handle defer: 14
+2023-06-30 18:57:34,432 DEBUG   SenderThread:47248 [sender.py:send():369] send: final
+2023-06-30 18:57:34,432 DEBUG   SenderThread:47248 [sender.py:send():369] send: footer
+2023-06-30 18:57:34,432 DEBUG   SenderThread:47248 [sender.py:send_request():396] send_request: defer
+2023-06-30 18:57:34,432 INFO    SenderThread:47248 [sender.py:send_request_defer():598] handle sender defer: 14
+2023-06-30 18:57:34,433 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: poll_exit
+2023-06-30 18:57:34,435 DEBUG   SenderThread:47248 [sender.py:send_request():396] send_request: poll_exit
+2023-06-30 18:57:34,435 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: poll_exit
+2023-06-30 18:57:34,435 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: server_info
+2023-06-30 18:57:34,435 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: get_summary
+2023-06-30 18:57:34,436 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: sampled_history
+2023-06-30 18:57:34,438 DEBUG   SenderThread:47248 [sender.py:send_request():396] send_request: poll_exit
+2023-06-30 18:57:34,438 DEBUG   SenderThread:47248 [sender.py:send_request():396] send_request: server_info
+2023-06-30 18:57:34,769 INFO    MainThread:47248 [wandb_run.py:_footer_history_summary_info():3467] rendering history
+2023-06-30 18:57:34,769 INFO    MainThread:47248 [wandb_run.py:_footer_history_summary_info():3499] rendering summary
+2023-06-30 18:57:34,770 INFO    MainThread:47248 [wandb_run.py:_footer_sync_info():3426] logging synced files
+2023-06-30 18:57:34,770 DEBUG   HandlerThread:47248 [handler.py:handle_request():144] handle_request: shutdown
+2023-06-30 18:57:34,771 INFO    HandlerThread:47248 [handler.py:finish():854] shutting down handler
+2023-06-30 18:57:35,440 INFO    WriterThread:47248 [datastore.py:close():298] close: /Users/kilianhaefeli/pytorch_lightning_template/outputs/Points_MLP_offset_10_Tm_0.3_seed_42_contours_True_out_type_polar_graph_True_in_type_t_angle_emb_dim_128_num_layer_5_norm_BatchNorm_seed_42_max_epochs_5022_batch_size_32_optimizer_LBFGS/wandb/run-20230630_185446-2czo3ikf/run-2czo3ikf.wandb
+2023-06-30 18:57:35,771 INFO    SenderThread:47248 [sender.py:finish():1526] shutting down sender
+2023-06-30 18:57:35,771 INFO    SenderThread:47248 [file_pusher.py:finish():159] shutting down file pusher
+2023-06-30 18:57:35,771 INFO    SenderThread:47248 [file_pusher.py:join():164] waiting for file pusher

@@ -1,0 +1,1 @@
+{"train_MSELoss": NaN, "val_epoch_MSELoss": NaN, "train_epoch_MSELoss": NaN, "trainer/global_step": 74, "epoch": 2, "val_MSELoss": NaN, "train_L1Loss": NaN, "train_epoch_L1Loss": NaN, "_step": 24, "_runtime": 767.7209899425507, "_timestamp": 1688143431.035861, "val_L1Loss": NaN, "val_epoch_L1Loss": NaN, "_wandb": {"runtime": 765}}

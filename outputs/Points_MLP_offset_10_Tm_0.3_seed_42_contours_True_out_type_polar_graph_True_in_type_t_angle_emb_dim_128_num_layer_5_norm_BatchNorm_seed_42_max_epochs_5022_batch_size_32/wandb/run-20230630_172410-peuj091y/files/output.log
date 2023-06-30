@@ -1,0 +1,14 @@
+Global seed set to 42
+Traceback (most recent call last):
+  File "/Users/kilianhaefeli/pytorch_lightning_template/train_Points_MLP.py", line 21, in <module>
+    trainer = PROJECTTrainer(model_type, problem_type, data_kwargs, dataset_kwargs, model_kwargs, training_kwargs, lightning_kwargs, global_kwargs, resume)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kilianhaefeli/pytorch_lightning_template/project/train.py", line 58, in __init__
+    self._init_dataset()
+  File "/Users/kilianhaefeli/pytorch_lightning_template/project/train.py", line 109, in _init_dataset
+    self.dataset_train = Dataset(data, **self.dataset_kwargs, validation=False)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kilianhaefeli/pytorch_lightning_template/project/dataset.py", line 21, in __init__
+    self.train_indices = self.permutation[:cut]
+                         ~~~~~~~~~~~~~~~~^^^^^^
+TypeError: slice indices must be integers or None or have an __index__ method
