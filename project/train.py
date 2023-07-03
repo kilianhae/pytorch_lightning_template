@@ -1,5 +1,7 @@
-# here set up everything for training and testing with lightning. This is the first file getting called.
-
+"""
+Set up everything for training and testing with lightning. 
+This is the first file getting called and which will call all other files and functions.
+"""
 from pathlib import Path
 
 import lightning.pytorch as pl
@@ -13,11 +15,8 @@ import wandb
 import torch.utils as utils
 
 from project.dataset import Dataset, load_dataset
-
 from project.model import *
-
 from project.conf import OUTPUTDIR, WANDB_PROJECT, WANDB_MODE
-
 from project.model import PointMLP, MLP
 
 
@@ -36,18 +35,17 @@ def select_net(model_type: str):
     return Net
 
 class PROJECTTrainer:
-    def __init__(self, model_type, problem_type, data_kwargs, dataset_kwargs, model_kwargs, training_kwargs, lightning_kwargs, global_kwargs, resume=True, log_model=True, OUTPUTDIR=OUTPUTDIR):
+    def __init__(self, model_type, problem_type, data_kwargs, dataset_kwargs, model_kwargs, loader_kwargs, lightning_kwargs, global_kwargs, trainer_kwargs, resume=True, log_model=True):
         self.model_type = model_type
         self.problem_type = problem_type
         self.data_kwargs = data_kwargs
         self.dataset_kwargs = dataset_kwargs
         self.model_kwargs = model_kwargs
         self.global_kwargs = global_kwargs
-        self.training_kwargs = training_kwargs
-        self.valid_kwargs = training_kwargs
+        self.loader_kwargs = loader_kwargs
         self.lightning_kwargs = lightning_kwargs
+        self.trainer_kwargs = trainer_kwargs
         self.name = self._get_name()
-        self.OUTPUTDIR = OUTPUTDIR
         self.save_dir = OUTPUTDIR / Path(self.name)
         self.save_dir.mkdir(parents=True, exist_ok=True)
         self.wandb_session = wandb.init(project=WANDB_PROJECT, mode=WANDB_MODE, dir=self.save_dir, name=self.short_name, config=self.wandb_config, resume=resume)
@@ -67,10 +65,11 @@ class PROJECTTrainer:
         config["model_type"] = self.model_type
         config["data_kwargs"] = self.data_kwargs
         config["dataset_kwargs"] = self.dataset_kwargs
-        config["valid_kwargs"] = self.valid_kwargs
         config["model_kwargs"] = self.model_kwargs
-        config["training_kwargs"] = self.training_kwargs
+        config["global_kwargs"] = self.global_kwargs
         config["lightning_kwargs"] = self.lightning_kwargs
+        config["trainer_kwargs"] = self.trainer_kwargs
+        config["loader_kwargs"] = self.loader_kwargs
         return config
     
     @property
@@ -84,7 +83,7 @@ class PROJECTTrainer:
 
     def _get_name(self):
         name = f"{self.problem_type}_{self.model_type}"
-        #for key, value in self.data_kwargs.items():
+        # for key, value in self.data_kwargs.items():
         #    name += f"_{key}_{value}"
         for key, value in self.dataset_kwargs.items():
             name += f"_{key}_{value}"
@@ -92,7 +91,7 @@ class PROJECTTrainer:
             name += f"_{key}_{value}"
         for key, value in self.global_kwargs.items():
             name += f"_{key}_{value}"
-        for key, value in self.training_kwargs.items():
+        for key, value in self.loader_kwargs.items():
             name += f"_{key}_{value}"
         for key, value in self.lightning_kwargs.items():
             name += f"_{key}_{value}"
@@ -110,8 +109,8 @@ class PROJECTTrainer:
         self.dataset_train = Dataset(data, **self.dataset_kwargs, validation=False)
         self.dataset_valid = Dataset(data, **self.dataset_kwargs, validation=True)
 
-        self.train_loader = utils.data.DataLoader(self.dataset_train, batch_size=self.training_kwargs["batch_size"], shuffle=True,  num_workers=8)
-        self.validation_loader = utils.data.DataLoader(self.dataset_valid, self.valid_kwargs["batch_size"], shuffle=False,  num_workers=8)
+        self.train_loader = utils.data.DataLoader(self.dataset_train, batch_size=self.loader_kwargs["batch_size"], shuffle=True,  num_workers=1)
+        self.validation_loader = utils.data.DataLoader(self.dataset_valid, self.loader_kwargs["batch_size"], shuffle=False,  num_workers=1)
 
     def _init_model(self):
         # load the pytorch net that will be wrapped by the lightning model
@@ -131,12 +130,12 @@ class PROJECTTrainer:
              every_n_epochs = 1,
              dirpath = self.save_dir / Path("checkpoints"), # if left away this defaults to default_root_dir of trainer
              filename = "model-{epoch:02d}-{train_epoch_total_loss:.6f}",
-             monitor = "train_epoch_MSELoss",
+             monitor = "train_epoch_loss",
              save_top_k = 10,
              save_last = True
         )
 
-        self.trainer = pl.Trainer(accelerator='mps', devices=1, logger=self.wandb_logger, callbacks=[self.checkpoint_callback], max_epochs=5000,  default_root_dir=self.save_dir)
+        self.trainer = pl.Trainer(accelerator=self.trainer_kwargs["accelerator"], devices=self.trainer_kwargs["devices"], logger=self.wandb_logger, callbacks=[self.checkpoint_callback], max_epochs=self.trainer_kwargs["max_epochs"],  default_root_dir=self.save_dir, log_every_n_steps=1)
         
     def train(self):
         # check wether we should resume our model or not an start the training loop
@@ -145,4 +144,5 @@ class PROJECTTrainer:
         else:
             self.trainer.fit(self.model, self.train_loader, self.validation_loader)
 
+        # after training run the best model on the validation set
         self.trainer.validate(self.model, self.validation_loader, ckpt_path = "best")

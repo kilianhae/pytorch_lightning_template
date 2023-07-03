@@ -1,4 +1,8 @@
-# define all the dataset related code, most importantly the datasets (and loaders)
+"""
+Define all the dataset related code.
+Most importantly the datasets and the loading of data.
+"""
+
 import numpy as np
 import torch
 
@@ -20,7 +24,6 @@ class Dataset():
         self.permutation = np.random.RandomState().permutation(self.n)
         self.train_indices = self.permutation[:self.train_size]
         self.val_indices = self.permutation[self.train_size:]
-
     
     def __len__(self):
         if self.validation:
@@ -28,12 +31,11 @@ class Dataset():
         else:
             return self.train_size
     
-    
     def __getitem__(self, idx):
         if self.validation:
-            id = self.val_indices[idx]
+            idx = self.val_indices[idx]
         else:
-            id = self.train_indices[idx]
+            idx = self.train_indices[idx]
         
-        return torch.tensor(self.data[id,:1]).float(), torch.tensor(self.data[id,1:]).float()
+        return torch.tensor(self.data[idx,:1]).float(), torch.tensor(self.data[idx,1:]).float()
     

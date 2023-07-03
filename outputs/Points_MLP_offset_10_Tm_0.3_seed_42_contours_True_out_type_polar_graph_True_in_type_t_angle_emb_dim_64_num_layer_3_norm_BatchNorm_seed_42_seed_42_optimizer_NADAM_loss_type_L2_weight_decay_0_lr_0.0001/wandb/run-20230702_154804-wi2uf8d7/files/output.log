@@ -1,0 +1,13 @@
+Global seed set to 42
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/kilianhaefeli/pytorch_lightning_template/experiment/train_Points_MLP.py", line 36, in <module>
+    trainer = PROJECTTrainer(model_type, problem_type, data_kwargs, dataset_kwargs, model_kwargs, global_kwargs, lightning_kwargs, global_kwargs, trainer_kwargs, resume)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kilianhaefeli/pytorch_lightning_template/project/train.py", line 57, in __init__
+    self._init_dataset()
+  File "/Users/kilianhaefeli/pytorch_lightning_template/project/train.py", line 112, in _init_dataset
+    self.train_loader = utils.data.DataLoader(self.dataset_train, batch_size=self.loader_kwargs["batch_size"], shuffle=True,  num_workers=1)
+                                                                             ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+KeyError: 'batch_size'

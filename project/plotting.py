@@ -1,1 +1,3 @@
-# any function need for plotting elements of the dataset should be defined here
+"""
+Any functions needed for plotting are defined here.
+"""

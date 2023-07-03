@@ -1,0 +1,20 @@
+Global seed set to 42
+GPU available: True (mps), used: False
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+/Users/kilianhaefeli/miniconda3/envs/pytorch_lightning_template/lib/python3.11/site-packages/lightning/pytorch/trainer/setup.py:201: UserWarning: MPS available but not used. Set `accelerator` and `devices` using `Trainer(accelerator='mps', devices=1)`.
+  rank_zero_warn(
+/Users/kilianhaefeli/miniconda3/envs/pytorch_lightning_template/lib/python3.11/site-packages/lightning/pytorch/callbacks/model_checkpoint.py:615: UserWarning: Checkpoint directory /Users/kilianhaefeli/pytorch_lightning_template/outputs/Points_MLP_offset_10_Tm_0.3_seed_42_contours_True_out_type_polar_graph_True_in_type_t_angle_emb_dim_64_num_layer_3_norm_BatchNorm_seed_42_max_epochs_50_batch_size_32_optimizer_NADAM_loss_type_L2_weight_decay_0/checkpoints exists and is not empty.
+  rank_zero_warn(f"Checkpoint directory {dirpath} exists and is not empty.")
+Restoring states from the checkpoint path at /Users/kilianhaefeli/pytorch_lightning_template/outputs/Points_MLP_offset_10_Tm_0.3_seed_42_contours_True_out_type_polar_graph_True_in_type_t_angle_emb_dim_64_num_layer_3_norm_BatchNorm_seed_42_max_epochs_50_batch_size_32_optimizer_NADAM_loss_type_L2_weight_decay_0/checkpoints/last.ckpt
+  | Name | Type | Params
+------------------------------
+0 | net  | MLP  | 8.5 K
+------------------------------
+8.5 K     Trainable params
+0         Non-trainable params
+8.5 K     Total params
+0.034     Total estimated model params size (MB)
+Restored all states from the checkpoint at /Users/kilianhaefeli/pytorch_lightning_template/outputs/Points_MLP_offset_10_Tm_0.3_seed_42_contours_True_out_type_polar_graph_True_in_type_t_angle_emb_dim_64_num_layer_3_norm_BatchNorm_seed_42_max_epochs_50_batch_size_32_optimizer_NADAM_loss_type_L2_weight_decay_0/checkpoints/last.ckpt
+Sanity Checking: 0it [00:00, ?it/s]

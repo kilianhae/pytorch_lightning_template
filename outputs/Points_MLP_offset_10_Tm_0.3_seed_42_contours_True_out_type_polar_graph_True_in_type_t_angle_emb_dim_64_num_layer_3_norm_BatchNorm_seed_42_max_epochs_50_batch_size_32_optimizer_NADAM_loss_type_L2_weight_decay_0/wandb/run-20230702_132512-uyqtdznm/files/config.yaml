@@ -1,0 +1,69 @@
+wandb_version: 1
+
+problem_type:
+  desc: null
+  value: Points
+model_type:
+  desc: null
+  value: MLP
+data_kwargs:
+  desc: null
+  value:
+    features_num: 1
+dataset_kwargs:
+  desc: null
+  value:
+    offset: 10
+    Tm: 0.3
+    seed: 42
+    contours: true
+    out_type: polar
+    graph: true
+    in_type: t_angle
+valid_kwargs:
+  desc: null
+  value:
+    batch_size: 1
+model_kwargs:
+  desc: null
+  value:
+    emb_dim: 64
+    num_layer: 3
+    norm: BatchNorm
+training_kwargs:
+  desc: null
+  value:
+    max_epochs: 50
+    batch_size: 32
+lightning_kwargs:
+  desc: null
+  value:
+    optimizer: NADAM
+    loss_type: L2
+    weight_decay: 0
+_wandb:
+  desc: null
+  value:
+    python_version: 3.11.3
+    cli_version: 0.15.4
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1688297112.099234
+    t:
+      1:
+      - 1
+      - 55
+      2:
+      - 1
+      - 55
+      3:
+      - 5
+      - 13
+      - 16
+      - 23
+      4: 3.11.3
+      5: 0.15.4
+      8:
+      - 4
+      - 5

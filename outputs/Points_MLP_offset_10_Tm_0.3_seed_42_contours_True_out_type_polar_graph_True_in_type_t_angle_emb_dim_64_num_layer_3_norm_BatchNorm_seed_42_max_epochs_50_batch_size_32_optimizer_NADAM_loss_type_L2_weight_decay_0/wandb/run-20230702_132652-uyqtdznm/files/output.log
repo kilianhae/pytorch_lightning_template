@@ -1,0 +1,33 @@
+Global seed set to 42
+GPU available: True (mps), used: False
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+/Users/kilianhaefeli/miniconda3/envs/pytorch_lightning_template/lib/python3.11/site-packages/lightning/pytorch/trainer/setup.py:201: UserWarning: MPS available but not used. Set `accelerator` and `devices` using `Trainer(accelerator='mps', devices=1)`.
+  rank_zero_warn(
+/Users/kilianhaefeli/miniconda3/envs/pytorch_lightning_template/lib/python3.11/site-packages/lightning/pytorch/callbacks/model_checkpoint.py:615: UserWarning: Checkpoint directory /Users/kilianhaefeli/pytorch_lightning_template/outputs/Points_MLP_offset_10_Tm_0.3_seed_42_contours_True_out_type_polar_graph_True_in_type_t_angle_emb_dim_64_num_layer_3_norm_BatchNorm_seed_42_max_epochs_50_batch_size_32_optimizer_NADAM_loss_type_L2_weight_decay_0/checkpoints exists and is not empty.
+  rank_zero_warn(f"Checkpoint directory {dirpath} exists and is not empty.")
+Restoring states from the checkpoint path at /Users/kilianhaefeli/pytorch_lightning_template/outputs/Points_MLP_offset_10_Tm_0.3_seed_42_contours_True_out_type_polar_graph_True_in_type_t_angle_emb_dim_64_num_layer_3_norm_BatchNorm_seed_42_max_epochs_50_batch_size_32_optimizer_NADAM_loss_type_L2_weight_decay_0/checkpoints/last.ckpt
+  | Name | Type | Params
+------------------------------
+0 | net  | MLP  | 8.5 K
+------------------------------
+8.5 K     Trainable params
+0         Non-trainable params
+8.5 K     Total params
+0.034     Total estimated model params size (MB)
+Restored all states from the checkpoint at /Users/kilianhaefeli/pytorch_lightning_template/outputs/Points_MLP_offset_10_Tm_0.3_seed_42_contours_True_out_type_polar_graph_True_in_type_t_angle_emb_dim_64_num_layer_3_norm_BatchNorm_seed_42_max_epochs_50_batch_size_32_optimizer_NADAM_loss_type_L2_weight_decay_0/checkpoints/last.ckpt
+/Users/kilianhaefeli/miniconda3/envs/pytorch_lightning_template/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:432: PossibleUserWarning: The dataloader, val_dataloader, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 8 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+  rank_zero_warn(
+Sanity Checking DataLoader 0:   0%|                                                                                                                                      | 0/2 [00:00<?, ?it/s]tensor(4.0689e-05)
+Sanity Checking DataLoader 0:  50%|███████████████████████████████████████████████████████████████                                                               | 1/2 [00:00<00:00, 18.32it/s]tensor(0.0006)
+Sanity Checking DataLoader 0: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:00<00:00, 35.42it/s]
+/Users/kilianhaefeli/miniconda3/envs/pytorch_lightning_template/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:432: PossibleUserWarning: The dataloader, train_dataloader, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 8 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+  rank_zero_warn(
+`Trainer.fit` stopped: `max_epochs=50` reached.
+Restoring states from the checkpoint path at /Users/kilianhaefeli/pytorch_lightning_template/outputs/Points_MLP_offset_10_Tm_0.3_seed_42_contours_True_out_type_polar_graph_True_in_type_t_angle_emb_dim_64_num_layer_3_norm_BatchNorm_seed_42_max_epochs_50_batch_size_32_optimizer_NADAM_loss_type_L2_weight_decay_0/checkpoints/model-epoch=42-train_epoch_total_loss=0.000000.ckpt
+
+Loaded model weights from the checkpoint at /Users/kilianhaefeli/pytorch_lightning_template/outputs/Points_MLP_offset_10_Tm_0.3_seed_42_contours_True_out_type_polar_graph_True_in_type_t_angle_emb_dim_64_num_layer_3_norm_BatchNorm_seed_42_max_epochs_50_batch_size_32_optimizer_NADAM_loss_type_L2_weight_decay_0/checkpoints/model-epoch=42-train_epoch_total_loss=0.000000.ckpt
+Validation: 0it [00:00, ?it/s]
+/Users/kilianhaefeli/miniconda3/envs/pytorch_lightning_template/lib/python3.11/site-packages/lightning/pytorch/trainer/call.py:52: UserWarning: Detected KeyboardInterrupt, attempting graceful shutdown...
+  rank_zero_warn("Detected KeyboardInterrupt, attempting graceful shutdown...")

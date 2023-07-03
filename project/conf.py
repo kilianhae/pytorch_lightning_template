@@ -1,9 +1,14 @@
-"""LEAP code config."""
+""" 
+Sets up the logger config.
+Loads env variables from any .env files in the root directory.
+Further sets the default values for the global variables.
+Loads all needed environment variables from the .env file to importable python VARIABLES.
+"""
+
 import logging
 import os
 from pathlib import Path
 from typing import Callable, Type
-import logging
 
 from dotenv import load_dotenv
 
@@ -15,19 +20,20 @@ logging.basicConfig(
     datefmt='%Y-%m-%d %H:%M:%S',
     handlers=[logging.StreamHandler()])
 
-
+# load potential environment variables from .env file
 env_path = Path(__file__).parents[1] / ".env"
 if env_path.exists():
     load_dotenv(dotenv_path=env_path.resolve(), override=True, verbose=True)
 
-
 class LazyEnv:
-    """Lazy environment variable."""
+    """
+    Lazy environment variable, made to support loading from .env file or potentially setting the default value.
+    """
 
     def __init__(
         self,
         env_var: str,
-        default=None,
+        default = None,
         return_type: Type = str,
         after_eval: Callable = None,
     ):
@@ -51,23 +57,23 @@ PATH_ROOT = Path(__file__).parents[1]
 
 DATASETDIR = LazyEnv(
     "DATASET_DIR",
-    PATH_ROOT / Path("data1/sim_data"),
-    return_type=Path,
+    PATH_ROOT / Path("data"),
+    return_type = Path,
 ).eval()
 
-OUTPUTDIR = Path(str(PATH_ROOT)+"/outputs")
+OUTPUTDIR = Path(str(PATH_ROOT)+"/outputs/")
 
-CONDITIONAL_2D_DATASET_DIR = Path(str(PATH_ROOT)+"/data1/LEAP_2023_task1_2D")
+DATASET_DIR = LazyEnv(
+    "DATASET_DIR",
+    PATH_ROOT / Path("data"),
+    return_type = Path,
+).eval()
 
-WANDB_PROJECT = "sdsc-leap"
+WANDB_PROJECT = "project"
+
 WANDB_MODE = LazyEnv(
     "WANDB_MODE",
     "online",
     return_type=str,
 ).eval()
 
-Npc = 64
-
-Tmel = 1905.5
-
-Tpc = 0.3

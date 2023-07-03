@@ -1,0 +1,33 @@
+{
+    "os": "macOS-13.0.1-arm64-arm-64bit",
+    "python": "3.11.3",
+    "heartbeatAt": "2023-07-02T13:48:05.196207",
+    "startedAt": "2023-07-02T13:48:04.514668",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "-m experiment.train_Points_MLP",
+    "git": {
+        "remote": "git@github.com:kilianhae/pytorch_lightning_template.git",
+        "commit": "f0ce4ff47e279ca1b8c357026c948a5969893c78"
+    },
+    "email": "44493092+kilian888@users.noreply.github.com",
+    "root": "/Users/kilianhaefeli/pytorch_lightning_template",
+    "host": "Kilians-MacBook-Pro.local",
+    "username": "kilianhaefeli",
+    "executable": "/Users/kilianhaefeli/miniconda3/envs/pytorch_lightning_template/bin/python",
+    "cpu_count": 8,
+    "cpu_count_logical": 8,
+    "disk": {
+        "total": 460.4317207336426,
+        "used": 291.3218307495117
+    },
+    "gpuapple": {
+        "type": "arm",
+        "vendor": "Apple"
+    },
+    "memory": {
+        "total": 16.0
+    }
+}
