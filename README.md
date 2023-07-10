@@ -1,5 +1,5 @@
 
-This is how I build projects using pytorch lighnting :)
+This is how I build projects using pytorch lightning for research :)
 
 It serves as a template to provide structure, organization, replacability and some scalability.
 
