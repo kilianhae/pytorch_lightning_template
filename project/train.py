@@ -21,6 +21,20 @@ from project.model import PointMLP, MLP
 
 
 def select_model(problem_type: str):
+    """
+    A selection function to select which modeling approach (lightning model) we are using (e.g. graphs, images, points. etc.)
+    This should be extended to support all modeling approaches.
+
+    Parameters
+    ----------
+    problem_type: str
+        The name of the modeling approach we are using.
+    
+    Returns
+    -------
+    LightningModel: LightningModule
+    """
+    
     if problem_type == "Points":
         LightningModel = PointMLP
     else:
