@@ -18,9 +18,8 @@ cd pytorch_lightning_template
 ```
 
 3. Setup your environment:
-(creates an env, installs dependencies and the porject directory as a package)
+( installs dependencies and the project directory as a package )
 ```bash
-poetry init
 poetry install
 ```
 
